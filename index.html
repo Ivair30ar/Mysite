@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ING SERVICES LLC | Business & IT Consulting</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #f6f9fc, #dbeafe);
+        color: #222;
+        line-height: 1.6;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        z-index: 1000;
+    }
+
+    header h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #ffd700;
+    }
+
+    section {
+        padding: 120px 80px;
+        font-size: 20px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(120deg, #a5b4fc, #fcd34d);
+        color: #222;
+        height: 100vh;
+    }
+
+    .hero-text {
+        width: 50%;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 40px;
+        line-height: 1.5;
+    }
+
+
+    .hero img {
+        width: 50%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* --- About Section --- */
+    .about {
+        background: linear-gradient(120deg, #f9a8d4, #fef3c7);
+        text-align: left;
+    }
+
+    .about h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .about img {
+        display: block;
+        margin: 40px auto 0;
+        width: 70%;
+        border-radius: 12px;
+    }
+
+    /* --- Services --- */
+    .services {
+        background: linear-gradient(120deg, #99f6e4, #bfdbfe);
+    }
+
+    .services h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .service-list {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        flex: 1;
+        min-width: 280px;
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .service-item h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    /* --- Advantages --- */
+    .advantages {
+        background: linear-gradient(120deg, #fcd34d, #f9a8d4);
+    }
+
+    .advantages h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .adv-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .adv-item {
+        flex: 1;
+        min-width: 280px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    .adv-item h3 {
+        color: #2563eb;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    /* --- Process --- */
+    .process {
+        background: linear-gradient(120deg, #c7d2fe, #fde68a);
+    }
+
+    .process h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .steps {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .step {
+        flex: 1;
+        min-width: 280px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .step h3 {
+        font-size: 26px;
+        color: #059669;
+        margin-bottom: 10px;
+    }
+
+    /* --- Contact --- */
+    .contact {
+        background: linear-gradient(120deg, #fca5a5, #86efac);
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+    }
+
+    .contact-info {
+        width: 45%;
+        font-size: 22px;
+    }
+
+    .contact-form {
+        width: 45%;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        background: #2563eb;
+        color: white;
+        font-size: 20px;
+        border: none;
+        padding: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+        background: #1e40af;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>ING SERVICES LLC</h1>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <h2>Empowering Businesses with Strategy & Technology</h2>
+        <p>At ING SERVICES LLC, we combine strategic business insight with advanced IT support to help organizations evolve, streamline operations, and achieve measurable growth across all stages of development.</p>
+    </div>
+    <img src="https://plus.unsplash.com/premium_vector-1711987810156-4793e4aa786e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1288" alt="Business Image">
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2>Who We Are</h2>
+    <p>ING SERVICES LLC is a Florida-based consulting firm specializing in management, business transformation, and IT infrastructure solutions. Our mission is to guide small and medium-sized businesses toward sustainable growth through strategic planning, process optimization, and smart technology integration. With years of cross-industry experience, we help clients turn complexity into opportunity, delivering measurable value and long-term impact.</p>
+    <img src="https://plus.unsplash.com/premium_vector-1682269971961-a023bbdf6e76?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880" alt="Teamwork">
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2>Our Core Services</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <h3>Management Consulting</h3>
+            <p>We design and implement tailored strategies that align your business goals with operational efficiency. From organizational restructuring to financial performance optimization, our team ensures your company is positioned for sustainable success.</p>
+        </div>
+        <div class="service-item">
+            <h3>Business Consulting</h3>
+            <p>Our experts provide data-driven insights that help redefine business models, improve productivity, and enhance customer engagement. We focus on actionable solutions that drive measurable growth and innovation.</p>
+        </div>
+        <div class="service-item">
+            <h3>IT Support & Integration</h3>
+            <p>We deliver full-cycle IT support, from infrastructure setup and cybersecurity to cloud integration and software maintenance. Our IT specialists ensure your systems are secure, scalable, and future-ready.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Advantages -->
+<section class="advantages" id="advantages">
+    <h2>Why Partner with Us</h2>
+    <div class="adv-list">
+        <div class="adv-item">
+            <h3>Tailored Solutions</h3>
+            <p>We don’t believe in one-size-fits-all. Each project starts with understanding your unique challenges to build a custom, results-driven strategy.</p>
+        </div>
+        <div class="adv-item">
+            <h3>Experienced Professionals</h3>
+            <p>Our consultants bring a wealth of experience from multiple industries, ensuring comprehensive and innovative approaches to every challenge.</p>
+        </div>
+        <div class="adv-item">
+            <h3>Results That Matter</h3>
+            <p>We measure success by your success. Every recommendation and solution is designed to produce real-world impact and measurable outcomes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+    <h2>Our Working Process</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>1. Discovery & Analysis</h3>
+            <p>We begin by understanding your organization’s structure, goals, and pain points to identify key areas for improvement and growth.</p>
+        </div>
+        <div class="step">
+            <h3>2. Strategic Planning</h3>
+            <p>Our consultants develop a tailored roadmap integrating business strategy, technology, and operations for optimal performance.</p>
+        </div>
+        <div class="step">
+            <h3>3. Implementation & Support</h3>
+            <p>We put the plan into action with ongoing IT support and progress monitoring to ensure lasting results and scalability.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="contact-info">
+        <h2>Let’s Build Something Great Together</h2>
+        <p>We’d love to learn more about your business and how we can help accelerate your growth. Reach out today to start the conversation.</p>
+        <p><strong>Email:</strong> <a href="mailto:team@ingservices.org">team@ingservices.org</a><br>
+        <strong>Address:</strong> 3406 Gladstone St, Sarasota, FL 34231, USA</p>
+    </div>
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
